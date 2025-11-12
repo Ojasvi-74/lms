@@ -75,7 +75,10 @@
                                 $_SESSION['name'] =  $row['name'];
                                 $_SESSION['email'] =  $row['email'];
                                 $_SESSION['id'] =  $row['id'];
-                                header("Location: user_dashboard.php");
+                                $_SESSION['isAdmin'] = $row['isAdmin'];
+                                if($row['isAdmin'] == 0)
+                                    header("Location: user_dashboard.php");
+                                else header("Location: admin_dashboard.php");
                             }
                             else{
                                 ?>

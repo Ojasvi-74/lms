@@ -14,29 +14,43 @@
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Dashboard</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width,intial-scale=1">
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/css/bootstrap.min.css">
-      <script type="text/javascript" src="bootstrap-4.4.1/js/juqery_latest.js"></script>
-      <script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>"> -->
-    <style>
-        <?php include "styles.css" ?>
-    </style>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ Bootstrap 5 CDN -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+
+  <!-- ✅ Bootstrap 5 JS bundle (includes Popper) -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+
+  <!-- ✅ Your custom styles -->
+  <style>
+    <?php include "styles.css"; ?>
+  </style>
 </head>
+
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="admin_dashboard.php">Library Management System (LMS)</a>
+                <a class="navbar-brand" href="user_dashboard.php">Library Management System (LMS)</a>
             </div>
             <font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
             <font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></font>
             <ul class="nav navbar-nav navbar-right">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown">My Profile </a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">My Profile </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="view_profile.php">View Profile</a>
                     <div class="dropdown-divider"></div>
